@@ -1,8 +1,19 @@
-# Run the NEC-2 Study | 复现 NEC-2 仿真
+# Design Method and Reproduction
 
-Open the .nec decks in 4nec2 to inspect the geometry and radiation patterns. To regenerate the sweep outputs on Windows, install Python 3 and set NEC2_EXE to the 4nec2 solver path.
+[简体中文](reproduce.zh-CN.md) · [Project home](../README.md)
 
-使用 4nec2 打开 .nec 模型，查看几何和方向图。若要在 Windows 上重新生成扫参输出，安装 Python 3 并设置 NEC2_EXE 为 4nec2 求解器的路径。
+1. Start with a 0.480 m centre-fed dipole. Sweep length, tune to 0.457 m, and then vary wire diameter. The final wire diameter is 8 mm. The coursework report gives −10 dB crossings near 286.06 MHz and 316.51 MHz.
+2. Add a 0.460 m reflector 0.200 m behind the driven element. Compare reflector length and spacing while keeping the driven element geometry fixed.
+3. For the 3-element design, add one 0.400 m director 0.200 m in front. For the final 11-element design, use nine directors tapering from 0.420 m to 0.380 m. The first is 0.150 m ahead of the driven element and the rest are spaced by 0.200 m.
+4. Use `Γ = (Zin − 50 Ω)/(Zin + 50 Ω)` for matching. Realized gain adds `10 log10(1 − |Γ|²)` to the NEC gain. Front-to-back ratio compares gain along opposite boom directions.
+
+| Part | Editable decks | Results |
+| --- | --- | --- |
+| Dipole | [NEC files](../Part1/nec/) | [data](../Part1/data/) and [plots](../Part1/plots/) |
+| Reflector | [NEC files](../Part2/nec/) | [data](../Part2/data/) and [plots](../Part2/plots/) |
+| Directors | [NEC files](../Part3/nec/) | [data](../Part3/data/) and [plots](../Part3/plots/) |
+
+Open the models in 4nec2 to inspect geometry and radiation patterns. To rerun the scripts, use Python 3 and the Windows NEC-2 solver. Run in a separate working copy because the scripts regenerate CSV outputs and replace solver scratch directories.
 
 ~~~powershell
 $env:NEC2_EXE = 'C:/path/to/4nec2/exe/nec2dxs500.exe'
@@ -11,12 +22,4 @@ python scripts/part2_yagi_2el.py
 python scripts/part3_yagi_directors.py
 ~~~
 
-| Folder / 目录 | Design variables / 扫参变量 |
-| --- | --- |
-| [Part 1](../Part1/) | Dipole length and wire diameter / 偶极子长度与导体直径 |
-| [Part 2](../Part2/) | Reflector length and spacing / 反射器长度与间距 |
-| [Part 3](../Part3/) | Director length, spacing and multiple-director configurations / 引向器长度、间距与多引向器配置 |
-
-Run in a working copy to preserve the included result snapshots. The scripts regenerate CSVs and replace the solver scratch directories. The three scripts completed in a clean copy on Windows and produced 108 NEC output files.
-
-建议在工作副本中运行，以保留随仓库附带的结果快照。脚本会重新生成 CSV 并替换求解器的临时目录。三个脚本已在 Windows 干净副本中运行完成，共生成 108 个 NEC 输出文件。
+The three scripts were exercised together in a clean workspace and produced 108 solver outputs. Headline values come from the frequency-sweep CSVs and the broadband table in the coursework report.

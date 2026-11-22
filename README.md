@@ -1,26 +1,24 @@
-# 300 MHz Dipole and Yagi Study | 300 MHz 偶极子与八木天线仿真
+# 300 MHz Dipole and Yagi-Uda Antenna Study
 
-[English](#english) · [简体中文](#简体中文) · [Reproduce / 复现](docs/reproduce.md)
+[简体中文](README.zh-CN.md)
 
-## English
+This project uses 4nec2/NEC-2 to tune a centre-fed dipole and then compare how a passive reflector and one or more directors change the antenna response. It includes four final designs, their editable wire models, the sweep scripts and the exported data.
 
-A 4nec2/NEC-2 study that starts with a tuned centre-fed dipole, adds a reflector, and then varies director geometry to increase forward gain at 300 MHz. Each part includes editable NEC decks, CSV outputs and plots.
+**Result.** At 300 MHz the tuned dipole produced 1.99 dBi of simulated realized gain. The final 11-element Yagi with nine directors reached **13.26 dBi** with **−19.97 dB S11** and **12.15 dB front-to-back ratio**. Its −10 dB bandwidth was **18.27 MHz**, compared with **30.46 MHz** for the tuned dipole. The directional design trades matching bandwidth for greater forward gain.
 
-## 简体中文
+![The four modeled antennas compared at 300 MHz](Part3/plots/fig28_realized_gain_comparison_300MHz.png)
 
-使用 4nec2/NEC-2 建模，从中心馈电偶极子出发，加入反射器并扫描引向器尺寸与间距，比较 300 MHz 处的前向增益。三部分均包含可编辑的 NEC 模型、CSV 和仿真曲线。
+## Compare the designs
 
-![Comparison of simulated realized gain at 300 MHz / 300 MHz 仿真实现增益对比](Part3/plots/fig28_realized_gain_comparison_300MHz.png)
+| Model | S11 at 300 MHz | Realized gain | Front-to-back | −10 dB bandwidth |
+| --- | ---: | ---: | ---: | ---: |
+| [Tuned dipole](Part1/nec/dipole_final.nec) | −15.28 dB | 1.99 dBi | — | 30.46 MHz |
+| [2-element Yagi](Part2/nec/yagi_2el_final.nec) | −11.26 dB | 6.37 dBi | 4.87 dB | 14.13 MHz |
+| [3-element Yagi](Part3/nec/yagi_3el_final.nec) | −12.37 dB | 7.78 dBi | 10.74 dB | 12.73 MHz |
+| [11-element Yagi](Part3/nec/yagi_9dir_best.nec) | −19.97 dB | 13.26 dBi | 12.15 dB | 18.27 MHz |
 
-## 300 MHz results | 300 MHz 结果
+The Yagi figures use +x as forward and a 50 Ω reference for realized gain and S11. These are electromagnetic simulations. No fabricated antenna measurements are reported.
 
-| Model / 模型 | S11 (dB, 50 Ω) | Realized gain / 实现增益 (dBi) | Front-to-back / 前后比 (dB) |
-| --- | ---: | ---: | ---: |
-| [Tuned dipole / 调谐偶极子](Part1/nec/dipole_final.nec) | −15.28 | 1.99 | — |
-| [2-element Yagi / 两单元八木](Part2/nec/yagi_2el_final.nec) | −11.26 | 6.37 | 4.87 |
-| [3-element Yagi / 三单元八木](Part3/nec/yagi_3el_final.nec) | −12.37 | 7.78 | 10.74 |
-| [11-element Yagi, 9 directors / 十一单元八木，含九根引向器](Part3/nec/yagi_9dir_best.nec) | −19.97 | 13.26 | 12.15 |
+![Two-element Yagi azimuth and elevation patterns at 300 MHz](Part2/plots/fig9_yagi_2el_patterns_300MHz.png)
 
-Realized gain includes mismatch loss relative to 50 Ω. For each Yagi the table uses gain toward the forward +x direction. Results are from electromagnetic simulation.
-
-实现增益以 50 Ω 为参考计入失配损耗。八木天线各行使用 +x 方向的前向增益。表中数据均来自电磁仿真。
+[Model geometry, calculations and sweep commands](docs/reproduce.md)
