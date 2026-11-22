@@ -1,0 +1,6 @@
+CM NIE2226 Part 3 best 9-director Yagi - standard_420_to_380__first_150_then_200
+CM Submitted display version: run F7, then F4 to view the 300 MHz far-field pattern
+FR 0 1 0 0 300 0
+RP 0 181 361 1000 0 0 1 1
+XQ
+EN

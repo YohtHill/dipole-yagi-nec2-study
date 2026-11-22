@@ -1,0 +1,12 @@
+CM NIE2226 Part 1 - centre-fed cylindrical dipole initial model
+CM Frequency target: 300 MHz
+CM Total length: 0.480 m
+CM Diameter: 0.008 m, radius: 0.004 m
+CM Geometry: vertical dipole along z-axis, centred at origin
+CE
+GW 1 15 0 0 -0.240 0 0 0.240 0.004
+GE 0
+EX 0 1 8 0 1 0
+FR 0 101 0 0 250 1
+XQ
+EN

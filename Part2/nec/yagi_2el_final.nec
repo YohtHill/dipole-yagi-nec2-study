@@ -1,0 +1,16 @@
+CM NIE2226 Part 2 final 2-element Yagi
+CM 2-element Yagi-Uda antenna for NIE2226 Part 2
+CM Driven dipole length: 0.457000 m
+CM Reflector length: 0.460000 m
+CM Reflector spacing behind driven element: 0.200000 m
+CM Diameter: 0.008000 m
+CM Geometry: vertical elements along z-axis; forward direction is +x
+CE
+GW 1 15 0 0 -0.228500 0 0 0.228500 0.004000
+GW 2 15 -0.200000 0 -0.230000 -0.200000 0 0.230000 0.004000
+GE 0
+EX 0 1 8 0 1 0
+FR 0 101 0 0 250 1
+RP 0 1 1 1000 90 0 0 0
+XQ
+EN

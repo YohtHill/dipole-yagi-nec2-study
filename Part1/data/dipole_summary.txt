@@ -1,0 +1,24 @@
+NIE2226 Part 1 dipole NEC2 summary
+====================================
+Final tuned total length: 0.457 m
+Diameter: 0.008 m
+Segments: 15
+Reference impedance for S11/realized gain: 50.0 ohm
+
+Resonant frequency by minimum S11: 300.000 MHz
+Minimum S11: -15.284 dB
+Input impedance at S11 minimum: 69.650 + j-6.255 ohm
+-10 dB lower frequency: 286.057 MHz
+-10 dB upper frequency: 316.512 MHz
+-10 dB bandwidth: 30.455 MHz
+Fractional bandwidth: 10.152 %
+Peak realized gain: 1.989 dBi at 300.000 MHz
+HPBW at 300 MHz: 78.667 deg (50.667 deg to 129.333 deg)
+
+Generated files:
+  Part1/dipole_final.nec
+  Part1/data/dipole_s11.csv
+  Part1/data/dipole_gain.csv
+  Part1/data/dipole_pattern_300MHz.csv
+  Part1/data/dipole_length_tuning.csv
+  Part1/data/dipole_thickness_sweep.csv

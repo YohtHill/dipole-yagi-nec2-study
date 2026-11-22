@@ -1,0 +1,35 @@
+CM NIE2226 Part 3 best 9-director Yagi - standard_420_to_380__first_150_then_200
+CM Frequency sweep version for checking S11 and forward realized gain
+CM Yagi-Uda antenna for NIE2226 Part 3
+CM Driven length: 0.457000 m
+CM Reflector length: 0.460000 m
+CM Reflector spacing behind driven element: 0.200000 m
+CM Element diameter: 0.008000 m
+CM Vertical elements along z-axis; forward direction is +x
+CM D1: length=0.420000 m, x=0.150000 m, spacing_from_previous=0.150000 m
+CM D2: length=0.415000 m, x=0.350000 m, spacing_from_previous=0.200000 m
+CM D3: length=0.410000 m, x=0.550000 m, spacing_from_previous=0.200000 m
+CM D4: length=0.405000 m, x=0.750000 m, spacing_from_previous=0.200000 m
+CM D5: length=0.400000 m, x=0.950000 m, spacing_from_previous=0.200000 m
+CM D6: length=0.395000 m, x=1.150000 m, spacing_from_previous=0.200000 m
+CM D7: length=0.390000 m, x=1.350000 m, spacing_from_previous=0.200000 m
+CM D8: length=0.385000 m, x=1.550000 m, spacing_from_previous=0.200000 m
+CM D9: length=0.380000 m, x=1.750000 m, spacing_from_previous=0.200000 m
+CE
+GW 1 15 0 0 -0.228500 0 0 0.228500 0.004000
+GW 2 15 -0.200000 0 -0.230000 -0.200000 0 0.230000 0.004000
+GW 3 15 0.150000 0 -0.210000 0.150000 0 0.210000 0.004000
+GW 4 15 0.350000 0 -0.207500 0.350000 0 0.207500 0.004000
+GW 5 15 0.550000 0 -0.205000 0.550000 0 0.205000 0.004000
+GW 6 15 0.750000 0 -0.202500 0.750000 0 0.202500 0.004000
+GW 7 15 0.950000 0 -0.200000 0.950000 0 0.200000 0.004000
+GW 8 15 1.150000 0 -0.197500 1.150000 0 0.197500 0.004000
+GW 9 15 1.350000 0 -0.195000 1.350000 0 0.195000 0.004000
+GW 10 15 1.550000 0 -0.192500 1.550000 0 0.192500 0.004000
+GW 11 15 1.750000 0 -0.190000 1.750000 0 0.190000 0.004000
+GE 0
+EX 0 1 8 0 1 0
+FR 0 101 0 0 250 1
+RP 0 1 1 1000 90 0 0 0
+XQ
+EN

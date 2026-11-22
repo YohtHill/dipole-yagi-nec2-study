@@ -1,0 +1,50 @@
+NIE2226 Part 3 director Yagi-Uda NEC2 summary
+===============================================
+Driven length: 0.457 m
+Reflector length: 0.460 m
+Reflector spacing: 0.200 m
+Element diameter: 0.008 m
+
+Initial 3-element Yagi:
+  Director length: 0.400 m
+  Director spacing: 0.200 m
+  Realized gain at 300 MHz: 7.781 dBi
+  S11 at 300 MHz: -12.368 dB
+
+Final 3-element Yagi from sweeps:
+  Selection rule: highest 300 MHz realized gain with S11 <= -10 dB
+  Director length: 0.400 m
+  Director spacing: 0.200 m
+  Realized gain at 300 MHz: 7.781 dBi
+  Peak realized gain: 7.947 dBi at 305.000 MHz
+  S11 at 300 MHz: -12.368 dB
+  Front-to-back ratio at 300 MHz: 10.740 dB
+
+Best 9-director candidate:
+  Selection rule: highest 300 MHz realized gain with S11 <= -10 dB
+  Candidate name: standard_420_to_380__first_150_then_200
+  Realized gain at 300 MHz: 13.256 dBi
+  Peak realized gain: 13.406 dBi at 304.000 MHz
+  S11 at 300 MHz: -19.971 dB
+  Minimum S11: -23.024 dB at 303.000 MHz
+  Front-to-back ratio at 300 MHz: 12.150 dB
+  -10 dB bandwidth: 18.265 MHz
+  Fractional bandwidth: 6.028 %
+
+Gain comparisons at 300 MHz:
+  3-element vs dipole: 5.792 dB
+  3-element vs 2-element Yagi: 1.409 dB
+  9-director vs dipole: 11.267 dB
+  9-director vs 2-element Yagi: 6.884 dB
+  9-director vs 3-element Yagi: 5.475 dB
+
+Generated files:
+  Part3/yagi_3el_initial.nec
+  Part3/yagi_3el_final.nec
+  Part3/yagi_9dir_best.nec
+  Part3/director_length_sweep.xlsx
+  Part3/director_spacing_sweep.xlsx
+  Part3/directors_table.xlsx
+  Part3/yagi_9dir_s11.csv
+  Part3/yagi_9dir_gain.csv
+  Part3/yagi_9dir_fb.csv

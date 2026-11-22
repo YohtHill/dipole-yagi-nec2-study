@@ -1,0 +1,12 @@
+CM NIE2226 Part 1 final tuned dipole
+CM Total length: 0.457000 m
+CM Diameter: 0.008000 m
+CM Vertical dipole along z-axis, centred at origin
+CE
+GW 1 15 0 0 -0.228500 0 0 0.228500 0.004000
+GE 0
+EX 0 1 8 0 1 0
+FR 0 101 0 0 250 1
+RP 0 1 1 1000 90 0 0 0
+XQ
+EN

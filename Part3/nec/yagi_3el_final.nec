@@ -1,0 +1,18 @@
+CM NIE2226 Part 3 final 3-element Yagi
+CM Yagi-Uda antenna for NIE2226 Part 3
+CM Driven length: 0.457000 m
+CM Reflector length: 0.460000 m
+CM Reflector spacing behind driven element: 0.200000 m
+CM Element diameter: 0.008000 m
+CM Vertical elements along z-axis; forward direction is +x
+CM D1: length=0.400000 m, x=0.200000 m, spacing_from_previous=0.200000 m
+CE
+GW 1 15 0 0 -0.228500 0 0 0.228500 0.004000
+GW 2 15 -0.200000 0 -0.230000 -0.200000 0 0.230000 0.004000
+GW 3 15 0.200000 0 -0.200000 0.200000 0 0.200000 0.004000
+GE 0
+EX 0 1 8 0 1 0
+FR 0 101 0 0 250 1
+RP 0 1 1 1000 90 0 0 0
+XQ
+EN

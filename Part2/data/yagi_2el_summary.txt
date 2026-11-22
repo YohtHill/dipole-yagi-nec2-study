@@ -1,0 +1,34 @@
+NIE2226 Part 2 2-element Yagi-Uda NEC2 summary
+================================================
+Driven dipole length: 0.457 m
+Element diameter: 0.008 m
+
+Initial assignment reflector:
+  Reflector length: 0.480 m
+  Reflector spacing: 0.200 m
+  Realized gain at 300 MHz: 6.104 dBi
+  S11 at 300 MHz: -11.158 dB
+
+Selected final 2-element design from sweeps:
+  Reflector length: 0.460 m
+  Reflector spacing: 0.200 m
+  Resonant frequency by minimum S11: 294.000 MHz
+  Minimum S11: -14.747 dB
+  S11 at 300 MHz: -11.260 dB
+  Realized gain at 300 MHz: 6.372 dBi
+  Peak realized gain: 6.411 dBi at 298.000 MHz
+  Gain improvement vs initial reflector case at 300 MHz: 0.268 dB
+  Front-to-back ratio at 300 MHz: 4.870 dB
+  -10 dB lower frequency: 287.921 MHz
+  -10 dB upper frequency: 302.053 MHz
+  -10 dB bandwidth: 14.132 MHz
+  Fractional bandwidth: 4.807 %
+
+Generated files:
+  Part2/yagi_2el_initial.nec
+  Part2/yagi_2el_final.nec
+  Part2/yagi_2el_s11.csv
+  Part2/yagi_2el_gain.csv
+  Part2/yagi_2el_fb.csv
+  Part2/reflector_length_sweep.xlsx
+  Part2/reflector_spacing_sweep.xlsx

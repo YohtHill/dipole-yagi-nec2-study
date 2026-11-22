@@ -1,0 +1,5 @@
+__pycache__/
+nec_runs/
+*.inp
+*.out
+*.xlsx
